@@ -1,10 +1,6 @@
 ## Assumptions and constraints
 - Any special libraries for text processing were not used.
-<<<<<<< HEAD
-- Each function count words and characters only with English characters.
-=======
-- Each function count words and characters only with English characters. 
->>>>>>> e794c4fd59c0bb669dbcb0a41b9dacdd5f8c28ba
+- Each function counts words and characters only with English characters.
 - The size of the input paragraph can not be more than 500 words. 
 - The structure of the application code base is flat.
 - The application is stateless (does not store any information).
