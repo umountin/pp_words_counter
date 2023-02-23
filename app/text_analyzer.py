@@ -6,6 +6,10 @@ class TextAnalyzer:
     
     @classmethod 
     def text_tokenizer(cls, string: str) -> dict:
+        """Return a dict, with tokenized words, chars, and spaces from string
+
+        A method to tokenize an input paragraph by words, chars, and spaces.
+        """
         if isinstance(string, str):
             words = re.sub('[^A-Za-z0-9 ]+', '', string).split()
             chars = (word for word in string.split() if word.isascii())
@@ -18,7 +22,7 @@ class TextAnalyzer:
     def validate_paragraph_size(self) -> bool:
         """Return True or False
 
-        A function to check that the size of the input paragraph is not be more than 500 words. Accept only a words parameter from the object.
+        A method to check that the size of the input paragraph is not be more than 500 words. 
         """
         tokens = self.text_tokenizer(self.string)
 
@@ -32,7 +36,7 @@ class TextAnalyzer:
     def word_frequency_counter(self) -> dict:
         """Return a dict, with alphabetically ordered keys
 
-        A function to count the repetition of each word (alphanumeric).
+        A method to count the repetition of each word (alphanumeric).
         """
         tokens = self.text_tokenizer(self.string)
         words = tokens['words']
@@ -52,7 +56,7 @@ class TextAnalyzer:
     def word_counter(self) -> int:
         """Return an int
 
-        A function to count the total number of words. 
+        A method to count the total number of words. 
         """
         tokens = self.text_tokenizer(self.string)
         words = tokens['words']
@@ -64,7 +68,7 @@ class TextAnalyzer:
     def char_counter(self) -> tuple:
         """Return a tuple
 
-        A function to count the total number of characters, a) with whitespaces, b) without whitespaces. 
+        A method to count the total number of characters, a) with whitespaces, b) without whitespaces. 
         """
         tokens = self.text_tokenizer(self.string)
         chars = list(tokens['chars'])
